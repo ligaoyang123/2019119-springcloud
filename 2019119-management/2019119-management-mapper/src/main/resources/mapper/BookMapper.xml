@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.aaa.li.springcloud.mapper.BookMapper" >
+    <resultMap id="BaseResultMap" type="com.aaa.li.springcloud.model.Book" >
+        <id column="id" property="id" jdbcType="VARCHAR" />
+        <result column="book_name" property="bookName" jdbcType="VARCHAR" />
+        <result column="book_price" property="BookPrice" jdbcType="VARCHAR" />
+        <result column="type_id" property="TypeId" jdbcType="VARCHAR" />
+    </resultMap>
+    <select id="getAll" resultType="com.aaa.li.springcloud.model.Book">
+        select id,book_name bookName,book_price bookPrice,type_id typeId from book
+    </select>
+</mapper>
